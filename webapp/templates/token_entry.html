@@ -1,0 +1,150 @@
+<!--
+------------------------------------------------------------------------------
+
+ Copyright (c) Microsoft Corporation 2025.
+ All rights reserved.
+
+ This code is licensed under the MIT License.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files(the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and / or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions :
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+------------------------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Token Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .auth-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .auth-title {
+            color: #3f51b5;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .auth-form {
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-control-large {
+            height: 100px;
+        }
+        .btn-primary {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-primary:hover {
+            background-color: #303f9f;
+        }
+        .error-message {
+            color: #c62828;
+            background-color: #ffebee;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .instructions {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+        .instructions ol {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1 class="auth-title">Access Token Authentication</h1>
+        
+        <div class="instructions">
+            <h3>How to use this authentication method</h3>
+            <p>This page allows you to authenticate with the Adaptive CT API directly using an access token.</p>
+            <ol>
+                <li>Paste your valid Microsoft Azure AD access token in the field below</li>
+                <li>Click "Authenticate" to proceed</li>
+                <li>If valid, you will be redirected to the application</li>
+            </ol>
+        </div>
+        
+        {% if error %}
+        <div class="error-message" style="display: block;">
+            {{ error }}
+        </div>
+        {% endif %}
+        
+        <form class="auth-form" action="/authenticate" method="post">
+            <div class="form-group">
+                <label class="form-label" for="access_token">Access Token</label>
+                <textarea class="form-control form-control-large" id="access_token" name="access_token" 
+                          placeholder="Paste your access token here" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="user_name">Your Name (Optional)</label>
+                <input type="text" class="form-control" id="user_name" name="user_name" 
+                       placeholder="Your name or identifier">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="user_email">Your Email (Optional)</label>
+                <input type="email" class="form-control" id="user_email" name="user_email" 
+                       placeholder="your.email@example.com">
+            </div>
+            
+            <button type="submit" class="btn-primary">Authenticate</button>
+        </form>
+    </div>
+</body>
+</html>

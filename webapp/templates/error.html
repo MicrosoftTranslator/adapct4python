@@ -1,0 +1,84 @@
+<!--
+------------------------------------------------------------------------------
+
+ Copyright (c) Microsoft Corporation 2025.
+ All rights reserved.
+
+ This code is licensed under the MIT License.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files(the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and / or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions :
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+------------------------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .error-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .error-title {
+            color: #d32f2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .error-desc {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-btn:hover {
+            background-color: #283593;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-title">Authentication Error</h1>
+        <p class="error-desc"><strong>Error:</strong> {{ error }}</p>
+        <p class="error-desc"><strong>Description:</strong> {{ error_description }}</p>
+        <div class="actions">
+            <p>This could be due to:</p>
+            <ul>
+                <li>Invalid application configuration in Azure AD</li>
+                <li>Session handling issues</li>
+                <li>PKCE code flow issues</li>
+                <li>App permission problems</li>
+            </ul>
+            <p>Please check your application configuration and try again.</p>
+            <a href="/login" class="back-btn">Try Again</a>
+        </div>
+    </div>
+</body>
+</html>
