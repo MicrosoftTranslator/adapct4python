@@ -174,7 +174,7 @@ Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM
 │       ├── token_entry.html       # Authentication page
 │       └── error.html             # Error page template
 └── docs/                          # Documentation
-    ├── Adaptive_CT_API_Documentation.md
+    └── Adaptive_CT_API_Documentation.md
 
 ```
 
