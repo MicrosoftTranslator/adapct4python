@@ -30,7 +30,7 @@ Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM
 
 ​> [!IMPORTANT]  
 > This feature is currently **GATED** untill the end of September, 2025.
-> If you are interested to join the preview, send email to `translator@microsoft.com` with the following information:
+> If you are interested to join the preview, send email to `adaptivect@microsoft.com` with the following information:
 >
 > Email subject: Adaptive Custom Translation
 > - Company name
