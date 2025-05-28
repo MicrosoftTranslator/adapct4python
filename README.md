@@ -1,12 +1,12 @@
 # Adaptive Custom Translation (Preview)​ - Python web app
 
-A modern web application for Adaptive Custom Translation (Adaptive Custom Translation) that provides document management, translation services, and adaptive dataset management through an intuitive user interface.
+A modern web application to show you how to interact with Adaptive Custom Translation (Adaptive Custom Translation) API that provides document management, translation services, and adaptive dataset management through an intuitive user interface.
 
-# Business Value for the User​
+# Adaptive Custom Translation Business Value for the User​
 
 Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM to provide users with adaptive, context-aware translations across multiple languages. This feature aims to deliver high-accuracy translations by learning from user shared few samples and adapting to specific contexts and terminologies. ​
 
-# Feature Details​ for the User​
+# Adaptive Custom Translation Feature Details​ for the User​
 
 - Provide a system that enables users to upload/manage files containing few sentences of human translated pre-aligned source-to-target in TSV file format (TMX support coming at GA). ​
 
@@ -18,7 +18,7 @@ Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM
 
 - Users can ground the translation with five pre-aligned sentence pairs  instead of creating the dataset index; the latter is recommended.​
 
-# Key User Benefits
+# Adaptive Custom Translation Key User Benefits
 
 - No fine-tuning, no model deployment and no model maintenance. ​
 
