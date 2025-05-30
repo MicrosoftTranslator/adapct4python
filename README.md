@@ -1,6 +1,6 @@
 # Adaptive Custom Translation (Preview)​ - Python web app
 
-A modern web application to show you how to interact with Adaptive Custom Translation (Adaptive Custom Translation) API that provides document management, translation services, and adaptive dataset management through an intuitive user interface.
+A modern web application to show you how to interact with Adaptive Custom Translation (Adaptive CT) API that provides document management, translation services, and adaptive dataset management through an intuitive user interface.
 
 # Adaptive Custom Translation Business Value for the User​
 
