@@ -151,7 +151,6 @@ Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM
 ├── app.py                          # Main Flask application
 ├── auth_helper.py                  # Authentication utilities
 ├── requirements.txt                # Python dependencies
-├── .env                           # Environment configuration (create from template)
 ├── .env_template                  # Environment template
 ├── webapp/                        # Web application assets
 │   ├── static/
