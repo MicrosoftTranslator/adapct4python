@@ -36,6 +36,7 @@ Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM
 > - Company name
 > - Company website
 > - Business use case
+> - Microsoft account manager: first name, last name and email address
 > 
 > We are inviting twenty (20) S500 customers to join the feature evaluation and share their feedback. If you are amongst the first (20) customers, you will receive email response within two (2) weeks with details on how to join.
 >
