@@ -29,7 +29,7 @@ Adaptive Custom Translation is a cutting-edge translation feature leveraging LLM
 - Five pre-aligned sentence pairs is the minimum requirement to create a dataset index vs. Custom Translation 10,000 sentence pairs  to train quality model.​
 
 ​> [!IMPORTANT]  
-> This feature is currently **GATED** untill the end of September, 2025.
+> This feature is currently **GATED** untill the end of October, 2025.
 > If you are interested to join the preview, send email to `adaptivect@microsoft.com` with the following information:
 >
 > Email subject: Adaptive Custom Translation
@@ -327,3 +327,4 @@ For issues and questions:
 1. Check the troubleshooting section above
 2. Review the API documentation in `Adaptive_CT_API_Documentation.md`
 3. Contact your Azure administrator for service-related issues
+
